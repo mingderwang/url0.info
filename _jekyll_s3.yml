@@ -1,0 +1,8 @@
+s3_id: AKIAJF2FTOVIKE7H3YKQ
+s3_secret: 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
+s3_bucket: url0.info
+s3_endpoint: ap-northeast-1
+gzip: true
+max_age:
+  "assets/*": 6000
+  "*": 300

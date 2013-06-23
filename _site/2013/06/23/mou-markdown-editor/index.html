@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Mou markdown editor</title>
+	<meta name="author" content="Name Lastname">
+	<link href='/assets/themes/the-program/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Mou markdown editor" type="application/atom+xml">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+</head>
+<body>
+
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<nav class="nav-global">
+					<ul>
+						<li class="logo"><a href="/">Ming's Blogs with Jekyll Bootstrap</a></li>
+						<li class="archive"><a href="/archive.html">archive</a></li>
+						<li class="page"><a href="/pages.html">pages</a></li>
+						<li class="category"><a href="/categories.html">categories</a></li>
+						<li class="tag"><a href="/tags.html">tags</a></li>
+						<li class="forkme"><div><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=plusjade&repo=jekyll-bootstrap&type=fork&count=true"
+									allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe></div></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header>
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+						<h1 class="h2 entry-title">Mou markdown editor</h1>
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+			</header>
+
+			<div class="bd">
+				<div class="entry-content">
+					<h1 id='mou'>Mou</h1>
+
+<p><img src='http://mouapp.com/Mou_128.png' alt='Mou icon' /></p>
+
+<h2 id='overview'>Overview</h2>
+
+<p><strong>Mou</strong>, the missing Markdown editor for <em>web developers</em>.</p>
+
+<h3 id='syntax'>Syntax</h3>
+
+<h4 id='strong_and_emphasize'>Strong and Emphasize</h4>
+
+<p><strong>strong</strong> or <strong>strong</strong> ( Cmd + B )</p>
+
+<p><em>emphasize</em> or <em>emphasize</em> ( Cmd + I )</p>
+
+<p><strong>Sometimes I want a lot of text to be bold. Like, seriously, a <em>LOT</em> of text</strong></p>
+
+<h4 id='blockquotes'>Blockquotes</h4>
+
+<blockquote>
+<p>Right angle brackets &#62; are used for block quotes.</p>
+</blockquote>
+
+<h4 id='links_and_email'>Links and Email</h4>
+
+<p>An email <a href='mailto:example@example.com'>&#101;&#120;&#097;&#109;&#112;&#108;&#101;&#064;&#101;&#120;&#097;&#109;&#112;&#108;&#101;&#046;&#099;&#111;&#109;</a> link.</p>
+
+<p>Simple inline link <a href='http://chenluois.com'>http://chenluois.com</a>, another inline link <a href='http://smallerapp.com'>Smaller</a>, one more inline link with title <a href='http://resizesafari.com' title='a Safari extension'>Resize</a>.</p>
+
+<p>A <a href='http://mouapp.com' title='Markdown editor on Mac OS X'>reference style</a> link. Input id, then anywhere in the doc, define the link with corresponding id:</p>
+
+<p>Titles ( or called tool tips ) in the links are optional.</p>
+
+<h4 id='images'>Images</h4>
+
+<p>An inline image <img src='http://smallerapp.com/favicon.ico' alt='Smaller icon' />, title is optional.</p>
+
+<p>A <img src='http://resizesafari.com/favicon.ico' alt='Resize icon' /> reference style image.</p>
+
+<h4 id='inline_code_and_block_code'>Inline code and Block code</h4>
+
+<p>Inline code are surround by <code>backtick</code> key. To create a block code:</p>
+
+<pre><code>Indent each line by at least 1 tab, or 4 spaces.
+var Mou = exactlyTheAppIwant; </code></pre>
+
+<h4 id='ordered_lists'>Ordered Lists</h4>
+
+<p>Ordered lists are created using &#8220;1.&#8221; + Space:</p>
+
+<ol>
+<li>Ordered list item</li>
+
+<li>Ordered list item</li>
+
+<li>Ordered list item</li>
+</ol>
+
+<h4 id='unordered_lists'>Unordered Lists</h4>
+
+<p>Unordered list are created using &#8221;*&#8221; + Space:</p>
+
+<ul>
+<li>Unordered list item</li>
+
+<li>Unordered list item</li>
+
+<li>Unordered list item</li>
+</ul>
+
+<p>Or using &#8220;-&#8221; + Space:</p>
+
+<ul>
+<li>Unordered list item</li>
+
+<li>Unordered list item</li>
+
+<li>Unordered list item</li>
+</ul>
+
+<h4 id='hard_linebreak'>Hard Linebreak</h4>
+
+<p>End a line with two or more spaces will create a hard linebreak, called <code>&lt;br /&gt;</code> in HTML. ( Control + Return )<br />Above line ended with 2 spaces.</p>
+
+<h4 id='horizontal_rules'>Horizontal Rules</h4>
+
+<p>Three or more asterisks or dashes:</p>
+<hr /><hr /><hr />
+<h4 id='headers'>Headers</h4>
+
+<p>Setext-style:</p>
+
+<h1 id='this_is_h1'>This is H1</h1>
+
+<h2 id='this_is_h2'>This is H2</h2>
+
+<p>atx-style:</p>
+
+<h1 id='this_is_h1'>This is H1</h1>
+
+<h2 id='this_is_h2'>This is H2</h2>
+
+<h3 id='this_is_h3'>This is H3</h3>
+
+<h4 id='this_is_h4'>This is H4</h4>
+
+<h5 id='this_is_h5'>This is H5</h5>
+
+<h6 id='this_is_h6'>This is H6</h6>
+
+<h3 id='extra_syntax'>Extra Syntax</h3>
+
+<h4 id='footnotes'>Footnotes</h4>
+
+<p>Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:</p>
+
+<p>That&#8217;s some text with a footnote.<sup id='fnref:1'><a rel='footnote' href='#fn:1'>1</a></sup></p>
+
+<h4 id='strikethrough'>Strikethrough</h4>
+
+<p>Wrap with 2 tilde characters:</p>
+
+<p>~~Strikethrough~~</p>
+
+<h4 id='fenced_code_blocks'>Fenced Code Blocks</h4>
+
+<p>Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:</p>
+
+<pre><code>Fenced code blocks are like Stardard Markdown’s regular code
+blocks, except that they’re not indented and instead rely on
+a start and end fence lines to delimit the code block.</code></pre>
+
+<h4 id='tables'>Tables</h4>
+
+<p>A simple table looks like this:</p>
+<table><thead><tr><th>First Header</th><th>Second Header</th><th>Third Header</th></tr></thead><tbody><tr><td style='text-align: left;'>Content Cell</td><td style='text-align: left;'>Content Cell</td><td style='text-align: left;'>Content Cell</td>
+</tr><tr><td style='text-align: left;'>Content Cell</td><td style='text-align: left;'>Content Cell</td><td style='text-align: left;'>Content Cell</td>
+</tr></tbody></table>
+<p>If you wish, you can add a leading and tailing pipe to each line of the table:</p>
+<table><thead><tr><th>First Header</th><th>Second Header</th><th>Third Header</th></tr></thead><tbody><tr><td style='text-align: left;'>Content Cell</td><td style='text-align: left;'>Content Cell</td><td style='text-align: left;'>Content Cell</td>
+</tr><tr><td style='text-align: left;'>Content Cell</td><td style='text-align: left;'>Content Cell</td><td style='text-align: left;'>Content Cell</td>
+</tr></tbody></table>
+<p>Specify alignement for each column by adding colons to separator lines:</p>
+<table><thead><tr><th>First Header</th><th>Second Header</th><th>Third Header</th></tr></thead><tbody><tr><td style='text-align: left;'>Left</td><td style='text-align: center;'>Center</td><td style='text-align: right;'>Right</td>
+</tr><tr><td style='text-align: left;'>Left</td><td style='text-align: center;'>Center</td><td style='text-align: right;'>Right</td>
+</tr></tbody></table>
+<h3 id='shortcuts'>Shortcuts</h3>
+
+<h4 id='view'>View</h4>
+
+<ul>
+<li>Toggle live preview: Shift + Cmd + I</li>
+
+<li>Toggle Words Counter: Shift + Cmd + W</li>
+
+<li>Toggle Transparent: Shift + Cmd + T</li>
+
+<li>Toggle Floating: Shift + Cmd + F</li>
+
+<li>Left/Right = 1/1: Cmd + 0</li>
+
+<li>Left/Right = 3/1: Cmd + +</li>
+
+<li>Left/Right = 1/3: Cmd + -</li>
+
+<li>Toggle Writing orientation: Cmd + L</li>
+
+<li>Toggle fullscreen: Control + Cmd + F</li>
+</ul>
+
+<h4 id='actions'>Actions</h4>
+
+<ul>
+<li>Copy HTML: Option + Cmd + C</li>
+
+<li>Strong: Select text, Cmd + B</li>
+
+<li>Emphasize: Select text, Cmd + I</li>
+
+<li>Inline Code: Select text, Cmd + K</li>
+
+<li>Strikethrough: Select text, Cmd + U</li>
+
+<li>Link: Select text, Control + Shift + L</li>
+
+<li>Image: Select text, Control + Shift + I</li>
+
+<li>Select Word: Control + Option + W</li>
+
+<li>Select Line: Shift + Cmd + L</li>
+
+<li>Select All: Cmd + A</li>
+
+<li>Deselect All: Cmd + D</li>
+
+<li>Convert to Uppercase: Select text, Control + U</li>
+
+<li>Convert to Lowercase: Select text, Control + Shift + U</li>
+
+<li>Convert to Titlecase: Select text, Control + Option + U</li>
+
+<li>Convert to List: Select lines, Control + L</li>
+
+<li>Convert to Blockquote: Select lines, Control + Q</li>
+
+<li>Convert to H1: Cmd + 1</li>
+
+<li>Convert to H2: Cmd + 2</li>
+
+<li>Convert to H3: Cmd + 3</li>
+
+<li>Convert to H4: Cmd + 4</li>
+
+<li>Convert to H5: Cmd + 5</li>
+
+<li>Convert to H6: Cmd + 6</li>
+
+<li>Convert Spaces to Tabs: Control + [</li>
+
+<li>Convert Tabs to Spaces: Control + ]</li>
+
+<li>Insert Current Date: Control + Shift + 1</li>
+
+<li>Insert Current Time: Control + Shift + 2</li>
+
+<li>Insert entity &lt;: Control + Shift + ,</li>
+
+<li>Insert entity &gt;: Control + Shift + .</li>
+
+<li>Insert entity &amp;: Control + Shift + 7</li>
+
+<li>Insert entity Space: Control + Shift + Space</li>
+
+<li>Insert Scriptogr.am Header: Control + Shift + G</li>
+
+<li>Shift Line Left: Select lines, Cmd + [</li>
+
+<li>Shift Line Right: Select lines, Cmd + ]</li>
+
+<li>New Line: Cmd + Return</li>
+
+<li>Comment: Cmd + /</li>
+
+<li>Hard Linebreak: Control + Return</li>
+</ul>
+
+<h4 id='edit'>Edit</h4>
+
+<ul>
+<li>Auto complete current word: Esc</li>
+
+<li>Find: Cmd + F</li>
+
+<li>Close find bar: Esc</li>
+</ul>
+
+<h4 id='post'>Post</h4>
+
+<ul>
+<li>Post on Scriptogr.am: Control + Shift + S</li>
+
+<li>Post on Tumblr: Control + Shift + T</li>
+</ul>
+
+<h4 id='export'>Export</h4>
+
+<ul>
+<li>Export HTML: Option + Cmd + E</li>
+
+<li>Export PDF: Option + Cmd + P</li>
+</ul>
+
+<h3 id='and_more'>And more?</h3>
+
+<p>Don&#8217;t forget to check Preferences, lots of useful options are there.</p>
+
+<p>Follow <a href='http://twitter.com/chenluois'>@chenluois</a> on Twitter for the latest news.</p>
+
+<p>For feedback, use the menu <code>Help</code> - <code>Send Feedback</code></p>
+<div class='footnotes'><hr /><ol><li id='fn:1'>
+<p>And that&#8217;s the footnote.</p>
+<a rev='footnote' href='#fnref:1'>&#8617;</a></li></ol></div>
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2013-06-23T00:00:00+08:00" datetime="2013-06-23T00:00:00+08:00" pubdate>
+							<span class="month"><abbr>June</abbr></span>
+							<span class="day">23</span>
+							<span class="year">2013</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/tags.html#markdown-ref">markdown <span>1</span></a></li>
+    
+  
+
+
+
+						</ul>
+					</div><!-- meta -->
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="username" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/username" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					<div class="comment">
+					
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+					</div>
+				</div><!-- misc-content -->
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+							<li class="prev"><a class="internal" rel="prev"  href="/2013/06/23/1752-pods-were-found" title="View 1754 pods were found">&laquo; 1754 pods were found</a></li>
+							
+							
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">Name Lastname</span> - <span class="fn email">blah@email.test</span></address></li>
+						<li class="github"><a href="http://github.com/username/" rel="me">github.com/username</a></li>
+						<li class="twitter"><a href="http://twitter.com/username/" rel="me">twitter.com/username</a></li>
+						<li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>
+					</ul>
+				</div><!-- misc -->
+				<p class="licence">
+					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+				</p>
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/2013/06/23/mou-markdown-editor" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+</script>
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+  
+  
+</body>
+</html>
+
