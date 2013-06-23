@@ -3,12 +3,17 @@ Release 1.0
 for example to create a new post and sync to aws s3
 
 $ rake post title="1752 pods were found"
+$ cd _posts
+
 // edit 2013-06-23-1752-pods-were-found.md under _posts
+// edit file with markdown format
+// after complete test with $ jekyll server
+
 $ jekyll build
 
+$ cd _site
+
 $ s3cmd sync . s3://url0.info 
-
-
 
 
  Jekyll-Bootstrap
