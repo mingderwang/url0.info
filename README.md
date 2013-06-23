@@ -1,4 +1,17 @@
-# Jekyll-Bootstrap
+Release 1.0
+
+for example to create a new post and sync to aws s3
+
+$ rake post title="1752 pods were found"
+// edit 2013-06-23-1752-pods-were-found.md under _posts
+$ jekyll build
+
+$ s3cmd sync . s3://url0.info 
+
+
+
+
+ Jekyll-Bootstrap
 
 The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
 
