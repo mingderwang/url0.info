@@ -2,11 +2,11 @@
 <rss version="2.0">
 <channel>
         <title>Ming's Blogs with Jekyll Bootstrap</title>
-        <description>Ming's Blogs with Jekyll Bootstrap - Name Lastname</description>
+        <description>Ming's Blogs with Jekyll Bootstrap - Ming-der Wang</description>
         <link>http://username.github.io</link>
         <link>http://username.github.io</link>
-        <lastBuildDate>2013-07-26T12:53:55+08:00</lastBuildDate>
-        <pubDate>2013-07-26T12:53:55+08:00</pubDate>
+        <lastBuildDate>2013-07-26T13:07:19+08:00</lastBuildDate>
+        <pubDate>2013-07-26T13:07:19+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -137,7 +137,7 @@ var Mou = exactlyTheAppIwant; &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:&lt;/p&gt;
 
-&lt;p&gt;That&amp;#8217;s some text with a footnote.&lt;sup id='fnref:1'&gt;&lt;a href='#fn:1' rel='footnote'&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s some text with a footnote.&lt;sup id='fnref:1'&gt;&lt;a rel='footnote' href='#fn:1'&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h4 id='strikethrough'&gt;Strikethrough&lt;/h4&gt;
 
@@ -302,7 +302,7 @@ a start and end fence lines to delimit the code block.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For feedback, use the menu &lt;code&gt;Help&lt;/code&gt; - &lt;code&gt;Send Feedback&lt;/code&gt;&lt;/p&gt;
 &lt;div class='footnotes'&gt;&lt;hr /&gt;&lt;ol&gt;&lt;li id='fn:1'&gt;
 &lt;p&gt;And that&amp;#8217;s the footnote.&lt;/p&gt;
-&lt;a href='#fnref:1' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</description>
+&lt;a rev='footnote' href='#fnref:1'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</description>
                 <link>http://username.github.io/2013/06/23/mou-markdown-editor</link>
                 <guid>http://username.github.io/2013/06/23/mou-markdown-editor</guid>
                 <pubDate>2013-06-23T00:00:00+08:00</pubDate>
