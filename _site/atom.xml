@@ -4,7 +4,7 @@
  <title>Ming's Blogs with Jekyll Bootstrap</title>
  <link href="http://username.github.io/" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2013-06-23T18:00:49+08:00</updated>
+ <updated>2013-07-26T12:07:48+08:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Name Lastname</name>
@@ -13,13 +13,21 @@
 
  
  <entry>
+   <title>MediaWalker 2.0 Specification</title>
+   <link href="http://username.github.io/2013/07/26/mediawalker-20-specification"/>
+   <updated>2013-07-26T00:00:00+08:00</updated>
+   <id>http://username.github.io/2013/07/26/mediawalker-20-specification</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
    <title>Mou markdown editor</title>
    <link href="http://username.github.io/2013/06/23/mou-markdown-editor"/>
    <updated>2013-06-23T00:00:00+08:00</updated>
    <id>http://username.github.io/2013/06/23/mou-markdown-editor</id>
    <content type="html">&lt;h1 id='mou'&gt;Mou&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src='http://mouapp.com/Mou_128.png' alt='Mou icon' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Mou icon' src='http://mouapp.com/Mou_128.png' /&gt;&lt;/p&gt;
 
 &lt;h2 id='overview'&gt;Overview&lt;/h2&gt;
 
@@ -45,17 +53,17 @@
 
 &lt;p&gt;An email &lt;a href='mailto:example@example.com'&gt;&amp;#101;&amp;#120;&amp;#097;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#064;&amp;#101;&amp;#120;&amp;#097;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&lt;/a&gt; link.&lt;/p&gt;
 
-&lt;p&gt;Simple inline link &lt;a href='http://chenluois.com'&gt;http://chenluois.com&lt;/a&gt;, another inline link &lt;a href='http://smallerapp.com'&gt;Smaller&lt;/a&gt;, one more inline link with title &lt;a href='http://resizesafari.com' title='a Safari extension'&gt;Resize&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Simple inline link &lt;a href='http://chenluois.com'&gt;http://chenluois.com&lt;/a&gt;, another inline link &lt;a href='http://smallerapp.com'&gt;Smaller&lt;/a&gt;, one more inline link with title &lt;a title='a Safari extension' href='http://resizesafari.com'&gt;Resize&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;A &lt;a href='http://mouapp.com' title='Markdown editor on Mac OS X'&gt;reference style&lt;/a&gt; link. Input id, then anywhere in the doc, define the link with corresponding id:&lt;/p&gt;
+&lt;p&gt;A &lt;a title='Markdown editor on Mac OS X' href='http://mouapp.com'&gt;reference style&lt;/a&gt; link. Input id, then anywhere in the doc, define the link with corresponding id:&lt;/p&gt;
 
 &lt;p&gt;Titles ( or called tool tips ) in the links are optional.&lt;/p&gt;
 
 &lt;h4 id='images'&gt;Images&lt;/h4&gt;
 
-&lt;p&gt;An inline image &lt;img src='http://smallerapp.com/favicon.ico' alt='Smaller icon' /&gt;, title is optional.&lt;/p&gt;
+&lt;p&gt;An inline image &lt;img alt='Smaller icon' src='http://smallerapp.com/favicon.ico' /&gt;, title is optional.&lt;/p&gt;
 
-&lt;p&gt;A &lt;img src='http://resizesafari.com/favicon.ico' alt='Resize icon' /&gt; reference style image.&lt;/p&gt;
+&lt;p&gt;A &lt;img alt='Resize icon' src='http://resizesafari.com/favicon.ico' /&gt; reference style image.&lt;/p&gt;
 
 &lt;h4 id='inline_code_and_block_code'&gt;Inline code and Block code&lt;/h4&gt;
 
@@ -7341,7 +7349,7 @@ a start and end fence lines to delimit the code block.&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id='why_who'&gt;Why, who?&lt;/h3&gt;
 
-&lt;p&gt;I, &lt;a href='http://jrham.es' title='InstantMark creator, Jr. Hames'&gt;Jr. Hames&lt;/a&gt;, love Markdown and it&amp;#8217;s simplicity, but I can&amp;#8217;t find an editor that&amp;#8217;s just good and simple as such. That&amp;#8217;s why I create this web app. Actually, I liked it so much, that I wrote this entire text right here, after finishing the code.&lt;/p&gt;
+&lt;p&gt;I, &lt;a title='InstantMark creator, Jr. Hames' href='http://jrham.es'&gt;Jr. Hames&lt;/a&gt;, love Markdown and it&amp;#8217;s simplicity, but I can&amp;#8217;t find an editor that&amp;#8217;s just good and simple as such. That&amp;#8217;s why I create this web app. Actually, I liked it so much, that I wrote this entire text right here, after finishing the code.&lt;/p&gt;
 
 &lt;p&gt;I hope you like it. Please, feel free to contact me if you have any questions/suggestions or found a issue.&lt;/p&gt;
 
@@ -7349,19 +7357,19 @@ a start and end fence lines to delimit the code block.&lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href='https://github.com/coreyti/showdown' title='Showdown at GitHub'&gt;Showdown&lt;/a&gt;&lt;/strong&gt;, a Javascript port of Markdown.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a title='Showdown at GitHub' href='https://github.com/coreyti/showdown'&gt;Showdown&lt;/a&gt;&lt;/strong&gt;, a Javascript port of Markdown.&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href='https://github.com/eligrey/FileSaver.js' title='FileSaver.js at GitHub'&gt;FileSaver.js&lt;/a&gt;&lt;/strong&gt;, implements the &lt;code&gt;W3C saveAs()&lt;/code&gt; FileSaver interface in browsers that do not natively support it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a title='FileSaver.js at GitHub' href='https://github.com/eligrey/FileSaver.js'&gt;FileSaver.js&lt;/a&gt;&lt;/strong&gt;, implements the &lt;code&gt;W3C saveAs()&lt;/code&gt; FileSaver interface in browsers that do not natively support it.&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href='https://github.com/eligrey/BlobBuilder.js' title='BlobBuilder at GitHub'&gt;BlobBuilder.js&lt;/a&gt;&lt;/strong&gt;, implements the &lt;code&gt;W3C BlobBuilder&lt;/code&gt; interface in browsers that do not natively support it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a title='BlobBuilder at GitHub' href='https://github.com/eligrey/BlobBuilder.js'&gt;BlobBuilder.js&lt;/a&gt;&lt;/strong&gt;, implements the &lt;code&gt;W3C BlobBuilder&lt;/code&gt; interface in browsers that do not natively support it.&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;A modified version of &lt;strong&gt;&lt;a href='http://kevinburke.bitbucket.org/markdowncss' title='Markdown CSS at BitBucket'&gt;Markdown.css&lt;/a&gt;&lt;/strong&gt;, a better default styling for your Markdown files. You can download our custom version &lt;a href='http://jrham.es/instantmark/preview.css' title='Preview CSS file - InstantMark'&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A modified version of &lt;strong&gt;&lt;a title='Markdown CSS at BitBucket' href='http://kevinburke.bitbucket.org/markdowncss'&gt;Markdown.css&lt;/a&gt;&lt;/strong&gt;, a better default styling for your Markdown files. You can download our custom version &lt;a title='Preview CSS file - InstantMark' href='http://jrham.es/instantmark/preview.css'&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</content>
  </entry>
