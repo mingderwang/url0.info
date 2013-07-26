@@ -5,8 +5,8 @@
         <description>Ming's Blogs with Jekyll Bootstrap - Ming-der Wang</description>
         <link>http://username.github.io</link>
         <link>http://username.github.io</link>
-        <lastBuildDate>2013-07-26T13:07:19+08:00</lastBuildDate>
-        <pubDate>2013-07-26T13:07:19+08:00</pubDate>
+        <lastBuildDate>2013-07-26T13:21:38+08:00</lastBuildDate>
+        <pubDate>2013-07-26T13:21:38+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -22,7 +22,7 @@
                 <title>Mou markdown editor</title>
                 <description>&lt;h1 id='mou'&gt;Mou&lt;/h1&gt;
 
-&lt;p&gt;&lt;img alt='Mou icon' src='http://mouapp.com/Mou_128.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://mouapp.com/Mou_128.png' alt='Mou icon' /&gt;&lt;/p&gt;
 
 &lt;h2 id='overview'&gt;Overview&lt;/h2&gt;
 
@@ -56,9 +56,9 @@
 
 &lt;h4 id='images'&gt;Images&lt;/h4&gt;
 
-&lt;p&gt;An inline image &lt;img alt='Smaller icon' src='http://smallerapp.com/favicon.ico' /&gt;, title is optional.&lt;/p&gt;
+&lt;p&gt;An inline image &lt;img src='http://smallerapp.com/favicon.ico' alt='Smaller icon' /&gt;, title is optional.&lt;/p&gt;
 
-&lt;p&gt;A &lt;img alt='Resize icon' src='http://resizesafari.com/favicon.ico' /&gt; reference style image.&lt;/p&gt;
+&lt;p&gt;A &lt;img src='http://resizesafari.com/favicon.ico' alt='Resize icon' /&gt; reference style image.&lt;/p&gt;
 
 &lt;h4 id='inline_code_and_block_code'&gt;Inline code and Block code&lt;/h4&gt;
 

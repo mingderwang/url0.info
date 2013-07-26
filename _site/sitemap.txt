@@ -10,6 +10,9 @@ http://username.github.io/pages.html
 http://username.github.io/rss.xml
 http://username.github.io/sitemap.txt
 http://username.github.io/tags.html
+http://username.github.io/2013/06/index.html
+http://username.github.io/2011/12/index.html
+http://username.github.io/2013/07/index.html
 
 http://username.github.io/spec/2013/07/26/mediawalker-20-specification
 http://username.github.io/2013/06/23/mou-markdown-editor
