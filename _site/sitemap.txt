@@ -11,7 +11,7 @@ http://username.github.io/rss.xml
 http://username.github.io/sitemap.txt
 http://username.github.io/tags.html
 
-http://username.github.io/2013/07/26/mediawalker-20-specification
+http://username.github.io/spec/2013/07/26/mediawalker-20-specification
 http://username.github.io/2013/06/23/mou-markdown-editor
 http://username.github.io/2013/06/23/1752-pods-were-found
 http://username.github.io/2013/06/16/hello-world
