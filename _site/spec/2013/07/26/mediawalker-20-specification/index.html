@@ -61,9 +61,13 @@
 
 <p>For implementing most of the social media service features, MediaWalker 2.0 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in 2.0 will be listed in the specification section.</p>
 
-<h3 id='what_does_mediawalker_do'>What does MediaWalker Do?</h3>
+<h3 id='what_does_mediawalker_20_do'>What does MediaWalker 2.0 Do?</h3>
 
-<p>It runs on a large message queuing system in order not to blocking any API request.</p>
+<p>MediaWalker basically acts as a middleware of a media social network service. Therefore, not only it will provide a social network accounts management and also provide API for developers to write variety of applications on top of it or distribute or share DRM or DRM free contents throughout the network and printing services. Therefore, it also provide an authentication method for both applications and licensed contents management.</p>
+
+<p>MediaWalker is design to runs on a cloud service, based on a large message queuing system and multiple web servers in order not to block any API request and provide the best customer users experience. All web engines are spread across to a clustering OSGI containers with a distributed caching. Most of non-critical data are stored in a NoSQL non-blocking database with an automatic backup in order to provide a none-stop and high reliability services.</p>
+
+<p>MediaWalker contains a set of default built-in services for operators to provide up-to-date social media network services, such as notifications, chat rooms, a global search engine, and a marketplace for applications or contents free download or purchasing.</p>
 
 <h3 id='specification'>Specification</h3>
 
@@ -246,7 +250,7 @@
 </li>
 </ol>
 
-<p><strong>CONFIDENTIAL: <a href='?blank=1' title='Clear all text'>TOP SECRET</a>.</strong></p>
+<p><strong>CONFIDENTIAL: <a title='Clear all text' href='?blank=1'>TOP SECRET</a>.</strong></p>
 					<div class="meta">
 						<p class="date-publish">
 							Published: 

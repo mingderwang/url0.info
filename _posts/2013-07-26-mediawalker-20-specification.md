@@ -20,9 +20,14 @@ MediaWalker is a Platform as a Service (PaaS) for a peer-to-peer social media ne
 For implementing most of the social media service features, MediaWalker 2.0 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in 2.0 will be listed in the specification section.  
 
 
-### What does MediaWalker Do?
+### What does MediaWalker 2.0 Do?
 
-It runs on a large message queuing system in order not to blocking any API request.
+MediaWalker basically acts as a middleware of a media social network service. Therefore, not only it will provide a social network accounts management and also provide API for developers to write variety of applications on top of it or distribute or share DRM or DRM free contents throughout the network and printing services. Therefore, it also provide an authentication method for both applications and licensed contents management.
+
+MediaWalker is design to runs on a cloud service, based on a large message queuing system and multiple web servers in order not to block any API request and provide the best customer users experience. All web engines are spread across to a clustering OSGI containers with a distributed caching. Most of non-critical data are stored in a NoSQL non-blocking database with an automatic backup in order to provide a none-stop and high reliability services.
+
+MediaWalker contains a set of default built-in services for operators to provide up-to-date social media network services, such as notifications, chat rooms, a global search engine, and a marketplace for applications or contents free download or purchasing. 
+
 
 ### Specification
 
@@ -228,7 +233,7 @@ This page will be available at `http://yourdomain.com/people/bob/essay.html`
 
 **CONFIDENTIAL: [TOP SECRET].**
 
-  [john gruber]: http://daringfireball.net/
+  [KatDC]: http://www.katdc.com/
   [1]: http://daringfireball.net/projects/markdown/
   [source code]: http://www.attacklab.net/showdown-v0.9.zip
   [TOP SECRET]: ?blank=1 "Clear all text"
