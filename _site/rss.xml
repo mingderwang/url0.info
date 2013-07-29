@@ -5,8 +5,8 @@
         <description>Ming's Blogs with Jekyll Bootstrap - Ming-der Wang</description>
         <link>http://username.github.io</link>
         <link>http://username.github.io</link>
-        <lastBuildDate>2013-07-26T14:39:02+08:00</lastBuildDate>
-        <pubDate>2013-07-26T14:39:02+08:00</pubDate>
+        <lastBuildDate>2013-07-29T10:22:38+08:00</lastBuildDate>
+        <pubDate>2013-07-29T10:22:38+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -14,13 +14,13 @@
                 <title>MediaWalker 2.0 Specification</title>
                 <description>&lt;h2 id='overview'&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;This document provides a specification of the API which can be used from devices, applications or services to interact with any social media service running on top of a MediaWalker engine 2.0 or above. The core are implemented as a web API which you can be access anywhere from Internet via http protocol, which can be called by almost any computer language, such as Jacascript, Java, php, C#, Ruby, Python, and so on.&lt;/p&gt;
+&lt;p&gt;This document provides the specification of the API which can be used for developing devices, applications or services to interact with any social media service running on top of a MediaWalker engine 2.0 or above. The core are implemented as a set of RESTful API which you can be access anywhere from Internet via the http protocol, which can be called by almost any computer language, such as Jacascript, Java, php, C#, Ruby, Python, and so on.&lt;/p&gt;
 
 &lt;h3 id='what_is_mediawalker'&gt;What is MediaWalker?&lt;/h3&gt;
 
-&lt;p&gt;MediaWalker is a Platform as a Service (PaaS) for a peer-to-peer social media network. Not only provide a flexible and high-availability cloud service for media sharing, it also provides a non-blocking peer-to-peer message communication for operaters to implement their bussiness logic and connecting all the workflows together. Meanwhile, the respective API will be available for developers to implement applications or services on desktops, websites, mobile devices, or event sensers or any IoT, such as printers or any Arduino devices.&lt;/p&gt;
+&lt;p&gt;MediaWalker is a Platform as a Service (PaaS) for a peer-to-peer social media network. Not only provide a flexible and high-availability cloud service for media sharing, it also provides a non-blocking peer-to-peer message communication for operators to implement their business logic and connecting all the workflows together. Meanwhile, the respective API will be available for developers to implement applications or services on desktops, websites, mobile devices, or event sensors or any IoT, such as printers or any Arduino devices.&lt;/p&gt;
 
-&lt;p&gt;For most of social media service, MediaWalker 2.0 will includes some must have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing services, and so on. Beside built-in modules, the MediaWalker engine also provides the interface to communicate with existing Internet blobstore services, such as Amazon AWS, etc. For more details of available modules in 2.0 will be listed in specification section.&lt;/p&gt;
+&lt;p&gt;For implementing most of the social media service features, MediaWalker 2.0 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in 2.0 will be listed in the specification section.&lt;/p&gt;
 
 &lt;h3 id='examples'&gt;Examples&lt;/h3&gt;
 
@@ -53,39 +53,127 @@
 
 &lt;h3 id='what_does_mediawalker_do'&gt;What does MediaWalker Do?&lt;/h3&gt;
 
+&lt;p&gt;It runs on a large message queuing system in order not to blocking any API request.&lt;/p&gt;
+
 &lt;h3 id='specification'&gt;Specification&lt;/h3&gt;
 
 &lt;p&gt;The following document describes 2.0 of the MediaWalker API.&lt;/p&gt;
 
-&lt;p&gt;printer /-status -info -stream -location -owner&lt;/p&gt;
+&lt;p&gt;Basically all API are defined under three categories, resource, data type, service and community category. Resource category includes printers, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, and twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search and notification services.&lt;/p&gt;
 
-&lt;p&gt;resource /-printers -files -applications -services&lt;/p&gt;
+&lt;h2 id='resource_category'&gt;Resource Category&lt;/h2&gt;
 
-&lt;p&gt;file /-license -owner -permission -downloads -likes -comments&lt;/p&gt;
+&lt;p&gt;Where these resource information, permission or their current status can be access or interact through these API.&lt;/p&gt;
 
-&lt;p&gt;license /-name -reversion -type -notation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Printer&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;user /-real_name -username -password -email -files -printers -bank_account -social_networks -groups&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;printer
+   /-status
+    -info
+    -location
+    -owner
+    -stream&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;publisher /-files -name -address -contact -bank_account&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;developer /-applications -auth_keys&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;file
+   /-license
+    -owner
+    -permission
+    -downloads
+    -likes
+    -comments
+    -cost&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;auth /-auth_key&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Advertisement&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;application&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;advertisement 
+   /-publish
+    -subscribe
+    -unsubscribe
+    -stream&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;group /-chat -info -rss&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Global Search&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;social_network /-name -account -password&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;global_search&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;service&lt;/p&gt;
+&lt;h2 id='data_type_category'&gt;Data type Category&lt;/h2&gt;
 
-&lt;p&gt;advertisement /-publish -subscribe -unsubscribe -stream&lt;/p&gt;
+&lt;p&gt;Most of resource are related to each other with some formats for data types, there fore users retrieve these data types information through these API.&lt;/p&gt;
 
-&lt;p&gt;search&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;License&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id='summary'&gt;Summary&lt;/h3&gt;</description>
+&lt;pre&gt;&lt;code&gt;license
+   /-name
+    -reversion
+    -type
+    -notation&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;auth
+   /-auth_key&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Account&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;account
+   /-name
+    -account
+    -password&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='community_category'&gt;Community Category&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;User&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user
+   /-real_name
+   -username
+   -password
+   -email
+   -files
+   -printers
+   -bank_account
+   -social_networks
+   -groups&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Publisher&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;publisher
+   /-files
+    -name
+    -address
+    -contact
+    -bank_account&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Developer&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;developer
+   /-applications
+    -auth_keys&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Group&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;group
+   /-chat
+    -info
+    -rss&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='service_category'&gt;Service Category&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Global Search&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Notification&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;notification
+   /-post
+    -add_observe
+    -remove_observe
+    -time_stamp
+    -stream&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='summary'&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;CONFIDENTIAL: &lt;a title='Clear all text' href='?blank=1'&gt;TOP SECRET&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</description>
                 <link>http://username.github.io/spec/2013/07/26/mediawalker-20-specification</link>
                 <guid>http://username.github.io/spec/2013/07/26/mediawalker-20-specification</guid>
                 <pubDate>2013-07-26T00:00:00+08:00</pubDate>
@@ -95,7 +183,7 @@
                 <title>Mou markdown editor</title>
                 <description>&lt;h1 id='mou'&gt;Mou&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src='http://mouapp.com/Mou_128.png' alt='Mou icon' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Mou icon' src='http://mouapp.com/Mou_128.png' /&gt;&lt;/p&gt;
 
 &lt;h2 id='overview'&gt;Overview&lt;/h2&gt;
 
@@ -129,9 +217,9 @@
 
 &lt;h4 id='images'&gt;Images&lt;/h4&gt;
 
-&lt;p&gt;An inline image &lt;img src='http://smallerapp.com/favicon.ico' alt='Smaller icon' /&gt;, title is optional.&lt;/p&gt;
+&lt;p&gt;An inline image &lt;img alt='Smaller icon' src='http://smallerapp.com/favicon.ico' /&gt;, title is optional.&lt;/p&gt;
 
-&lt;p&gt;A &lt;img src='http://resizesafari.com/favicon.ico' alt='Resize icon' /&gt; reference style image.&lt;/p&gt;
+&lt;p&gt;A &lt;img alt='Resize icon' src='http://resizesafari.com/favicon.ico' /&gt; reference style image.&lt;/p&gt;
 
 &lt;h4 id='inline_code_and_block_code'&gt;Inline code and Block code&lt;/h4&gt;
 

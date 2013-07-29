@@ -53,13 +53,13 @@
 				<div class="entry-content">
 					<h2 id='overview'>Overview</h2>
 
-<p>This document provides a specification of the API which can be used from devices, applications or services to interact with any social media service running on top of a MediaWalker engine 2.0 or above. The core are implemented as a web API which you can be access anywhere from Internet via http protocol, which can be called by almost any computer language, such as Jacascript, Java, php, C#, Ruby, Python, and so on.</p>
+<p>This document provides the specification of the API which can be used for developing devices, applications or services to interact with any social media service running on top of a MediaWalker engine 2.0 or above. The core are implemented as a set of RESTful API which you can be access anywhere from Internet via the http protocol, which can be called by almost any computer language, such as Jacascript, Java, php, C#, Ruby, Python, and so on.</p>
 
 <h3 id='what_is_mediawalker'>What is MediaWalker?</h3>
 
-<p>MediaWalker is a Platform as a Service (PaaS) for a peer-to-peer social media network. Not only provide a flexible and high-availability cloud service for media sharing, it also provides a non-blocking peer-to-peer message communication for operaters to implement their bussiness logic and connecting all the workflows together. Meanwhile, the respective API will be available for developers to implement applications or services on desktops, websites, mobile devices, or event sensers or any IoT, such as printers or any Arduino devices.</p>
+<p>MediaWalker is a Platform as a Service (PaaS) for a peer-to-peer social media network. Not only provide a flexible and high-availability cloud service for media sharing, it also provides a non-blocking peer-to-peer message communication for operators to implement their business logic and connecting all the workflows together. Meanwhile, the respective API will be available for developers to implement applications or services on desktops, websites, mobile devices, or event sensors or any IoT, such as printers or any Arduino devices.</p>
 
-<p>For most of social media service, MediaWalker 2.0 will includes some must have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing services, and so on. Beside built-in modules, the MediaWalker engine also provides the interface to communicate with existing Internet blobstore services, such as Amazon AWS, etc. For more details of available modules in 2.0 will be listed in specification section.</p>
+<p>For implementing most of the social media service features, MediaWalker 2.0 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in 2.0 will be listed in the specification section.</p>
 
 <h3 id='examples'>Examples</h3>
 
@@ -92,39 +92,127 @@
 
 <h3 id='what_does_mediawalker_do'>What does MediaWalker Do?</h3>
 
+<p>It runs on a large message queuing system in order not to blocking any API request.</p>
+
 <h3 id='specification'>Specification</h3>
 
 <p>The following document describes 2.0 of the MediaWalker API.</p>
 
-<p>printer /-status -info -stream -location -owner</p>
+<p>Basically all API are defined under three categories, resource, data type, service and community category. Resource category includes printers, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, and twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search and notification services.</p>
 
-<p>resource /-printers -files -applications -services</p>
+<h2 id='resource_category'>Resource Category</h2>
 
-<p>file /-license -owner -permission -downloads -likes -comments</p>
+<p>Where these resource information, permission or their current status can be access or interact through these API.</p>
 
-<p>license /-name -reversion -type -notation</p>
+<p><strong>Printer</strong></p>
 
-<p>user /-real_name -username -password -email -files -printers -bank_account -social_networks -groups</p>
+<pre><code>printer
+   /-status
+    -info
+    -location
+    -owner
+    -stream</code></pre>
 
-<p>publisher /-files -name -address -contact -bank_account</p>
+<p><strong>File</strong></p>
 
-<p>developer /-applications -auth_keys</p>
+<pre><code>file
+   /-license
+    -owner
+    -permission
+    -downloads
+    -likes
+    -comments
+    -cost</code></pre>
 
-<p>auth /-auth_key</p>
+<p><strong>Advertisement</strong></p>
 
-<p>application</p>
+<pre><code>advertisement 
+   /-publish
+    -subscribe
+    -unsubscribe
+    -stream</code></pre>
 
-<p>group /-chat -info -rss</p>
+<p><strong>Global Search</strong></p>
 
-<p>social_network /-name -account -password</p>
+<pre><code>global_search</code></pre>
 
-<p>service</p>
+<h2 id='data_type_category'>Data type Category</h2>
 
-<p>advertisement /-publish -subscribe -unsubscribe -stream</p>
+<p>Most of resource are related to each other with some formats for data types, there fore users retrieve these data types information through these API.</p>
 
-<p>search</p>
+<p><strong>License</strong></p>
+
+<pre><code>license
+   /-name
+    -reversion
+    -type
+    -notation</code></pre>
+
+<p><strong>Authentication</strong></p>
+
+<pre><code>auth
+   /-auth_key</code></pre>
+
+<p><strong>Account</strong></p>
+
+<pre><code>account
+   /-name
+    -account
+    -password</code></pre>
+
+<h2 id='community_category'>Community Category</h2>
+
+<p><strong>User</strong></p>
+
+<pre><code>user
+   /-real_name
+   -username
+   -password
+   -email
+   -files
+   -printers
+   -bank_account
+   -social_networks
+   -groups</code></pre>
+
+<p><strong>Publisher</strong></p>
+
+<pre><code>publisher
+   /-files
+    -name
+    -address
+    -contact
+    -bank_account</code></pre>
+
+<p><strong>Developer</strong></p>
+
+<pre><code>developer
+   /-applications
+    -auth_keys</code></pre>
+
+<p><strong>Group</strong></p>
+
+<pre><code>group
+   /-chat
+    -info
+    -rss</code></pre>
+
+<h2 id='service_category'>Service Category</h2>
+
+<p><strong>Global Search</strong></p>
+
+<p><strong>Notification</strong></p>
+
+<pre><code>notification
+   /-post
+    -add_observe
+    -remove_observe
+    -time_stamp
+    -stream</code></pre>
 
 <h3 id='summary'>Summary</h3>
+
+<p><strong>CONFIDENTIAL: <a title='Clear all text' href='?blank=1'>TOP SECRET</a>.</strong></p>
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
