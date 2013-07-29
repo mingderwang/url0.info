@@ -98,7 +98,7 @@
 
 <p>The following document describes 2.0 of the MediaWalker API.</p>
 
-<p>Basically all API are defined under three categories, resource, data type, service and community category. Resource category includes printers, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, and twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search and notification services.</p>
+<p>Basically all API are defined under three categories, resource, data type, service and community category. Resource category includes printers, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, application and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, and twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search, notification, chat rooms and application marketplace services.</p>
 
 <h2 id='resource_category'>Resource Category</h2>
 
@@ -132,9 +132,10 @@
     -unsubscribe
     -stream</code></pre>
 
-<p><strong>Global Search</strong></p>
+<p><strong>Search</strong></p>
 
-<pre><code>global_search</code></pre>
+<pre><code>search
+   /-filter</code></pre>
 
 <h2 id='data_type_category'>Data type Category</h2>
 
@@ -159,6 +160,17 @@
    /-name
     -account
     -password</code></pre>
+
+<p><strong>Application</strong></p>
+
+<pre><code>application
+   /-category
+    -owner
+    -rated
+    -updated
+    -advertisement_list
+    -redeems
+    -search</code></pre>
 
 <h2 id='community_category'>Community Category</h2>
 
@@ -197,9 +209,17 @@
     -info
     -rss</code></pre>
 
+<p><strong>Search</strong></p>
+
+<pre><code>search
+   /-filter</code></pre>
+
 <h2 id='service_category'>Service Category</h2>
 
 <p><strong>Global Search</strong></p>
+
+<pre><code>global_search
+   /-filter</code></pre>
 
 <p><strong>Notification</strong></p>
 
@@ -209,6 +229,20 @@
     -remove_observe
     -time_stamp
     -stream</code></pre>
+
+<p><strong>Chat</strong></p>
+
+<pre><code>chat
+   /-room
+    -join
+    -rss</code></pre>
+
+<p><strong>Application Marketplace</strong></p>
+
+<pre><code>marketplace
+   /-category
+   /-search
+   /-promotion</code></pre>
 
 <h3 id='summary'>Summary</h3>
 

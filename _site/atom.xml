@@ -4,7 +4,7 @@
  <title>Ming's Blogs with Jekyll Bootstrap</title>
  <link href="http://username.github.io/" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2013-07-29T10:22:38+08:00</updated>
+ <updated>2013-07-29T11:10:41+08:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Ming-der Wang</name>
@@ -64,7 +64,7 @@
 
 &lt;p&gt;The following document describes 2.0 of the MediaWalker API.&lt;/p&gt;
 
-&lt;p&gt;Basically all API are defined under three categories, resource, data type, service and community category. Resource category includes printers, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, and twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search and notification services.&lt;/p&gt;
+&lt;p&gt;Basically all API are defined under three categories, resource, data type, service and community category. Resource category includes printers, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, application and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, and twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search, notification, chat rooms and application marketplace services.&lt;/p&gt;
 
 &lt;h2 id='resource_category'&gt;Resource Category&lt;/h2&gt;
 
@@ -98,9 +98,10 @@
     -unsubscribe
     -stream&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Global Search&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Search&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;global_search&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;search
+   /-filter&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id='data_type_category'&gt;Data type Category&lt;/h2&gt;
 
@@ -125,6 +126,17 @@
    /-name
     -account
     -password&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Application&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;application
+   /-category
+    -owner
+    -rated
+    -updated
+    -advertisement_list
+    -redeems
+    -search&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id='community_category'&gt;Community Category&lt;/h2&gt;
 
@@ -163,9 +175,17 @@
     -info
     -rss&lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;&lt;strong&gt;Search&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;search
+   /-filter&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id='service_category'&gt;Service Category&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Global Search&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;global_search
+   /-filter&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;Notification&lt;/strong&gt;&lt;/p&gt;
 
@@ -175,6 +195,20 @@
     -remove_observe
     -time_stamp
     -stream&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Chat&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chat
+   /-room
+    -join
+    -rss&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Application Marketplace&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;marketplace
+   /-category
+   /-search
+   /-promotion&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id='summary'&gt;Summary&lt;/h3&gt;
 
@@ -303,7 +337,7 @@ var Mou = exactlyTheAppIwant; &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:&lt;/p&gt;
 
-&lt;p&gt;That&amp;#8217;s some text with a footnote.&lt;sup id='fnref:1'&gt;&lt;a rel='footnote' href='#fn:1'&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s some text with a footnote.&lt;sup id='fnref:1'&gt;&lt;a href='#fn:1' rel='footnote'&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h4 id='strikethrough'&gt;Strikethrough&lt;/h4&gt;
 
@@ -468,7 +502,7 @@ a start and end fence lines to delimit the code block.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For feedback, use the menu &lt;code&gt;Help&lt;/code&gt; - &lt;code&gt;Send Feedback&lt;/code&gt;&lt;/p&gt;
 &lt;div class='footnotes'&gt;&lt;hr /&gt;&lt;ol&gt;&lt;li id='fn:1'&gt;
 &lt;p&gt;And that&amp;#8217;s the footnote.&lt;/p&gt;
-&lt;a rev='footnote' href='#fnref:1'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</content>
+&lt;a href='#fnref:1' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</content>
  </entry>
  
  <entry>

@@ -125,7 +125,7 @@ Most of resource are related to each other with some formats for data types, the
         -password
 
 
-**Application*
+**Application**
 
     application
        /-category
