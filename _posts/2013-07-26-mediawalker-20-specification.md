@@ -19,31 +19,6 @@ MediaWalker is a Platform as a Service (PaaS) for a peer-to-peer social media ne
 
 For implementing most of the social media service features, MediaWalker 2.0 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in 2.0 will be listed in the specification section.  
 
-### Examples
-
-**Sub-Directories**
-If pages are defined in sub-directories, the path to the page will be reflected in the url.
-Example:
-
-    .
-    |-- people
-        |-- bob
-            |-- essay.html
-
-This page will be available at `http://yourdomain.com/people/bob/essay.html`
-
-
-**Recommended Pages**
-
-- **index.html**
-  You will always want to define the root index.html page as this will display on your root URL.
-- **404.html**
-
-
-1. **Jekyll collects data.**
-  Jekyll scans the posts directory and collects all posts files as post objects. It then scans the layout assets and collects those and finally scans other directories in search of pages.
-
-2. **Jekyll computes data.**
 
 ### What does MediaWalker Do?
 
@@ -223,6 +198,33 @@ Most of resource are related to each other with some formats for data types, the
 
 
 ### Summary
+
+### Mardown Examples
+
+**Sub-Directories**
+If pages are defined in sub-directories, the path to the page will be reflected in the url.
+Example:
+
+    .
+    |-- people
+        |-- bob
+            |-- essay.html
+
+This page will be available at `http://yourdomain.com/people/bob/essay.html`
+
+
+**Recommended Pages**
+
+- **index.html**
+  You will always want to define the root index.html page as this will display on your root URL.
+- **404.html**
+
+
+1. **Jekyll collects data.**
+  Jekyll scans the posts directory and collects all posts files as post objects. It then scans the layout assets and collects those and finally scans other directories in search of pages.
+
+2. **Jekyll computes data.**
+
 
 **CONFIDENTIAL: [TOP SECRET].**
 

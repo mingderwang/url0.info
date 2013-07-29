@@ -61,35 +61,6 @@
 
 <p>For implementing most of the social media service features, MediaWalker 2.0 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in 2.0 will be listed in the specification section.</p>
 
-<h3 id='examples'>Examples</h3>
-
-<p><strong>Sub-Directories</strong> If pages are defined in sub-directories, the path to the page will be reflected in the url. Example:</p>
-
-<pre><code>.
-|-- people
-    |-- bob
-        |-- essay.html</code></pre>
-
-<p>This page will be available at <code>http://yourdomain.com/people/bob/essay.html</code></p>
-
-<p><strong>Recommended Pages</strong></p>
-
-<ul>
-<li><strong>index.html</strong> You will always want to define the root index.html page as this will display on your root URL.</li>
-
-<li><strong>404.html</strong></li>
-</ul>
-
-<ol>
-<li>
-<p><strong>Jekyll collects data.</strong> Jekyll scans the posts directory and collects all posts files as post objects. It then scans the layout assets and collects those and finally scans other directories in search of pages.</p>
-</li>
-
-<li>
-<p><strong>Jekyll computes data.</strong></p>
-</li>
-</ol>
-
 <h3 id='what_does_mediawalker_do'>What does MediaWalker Do?</h3>
 
 <p>It runs on a large message queuing system in order not to blocking any API request.</p>
@@ -246,7 +217,36 @@
 
 <h3 id='summary'>Summary</h3>
 
-<p><strong>CONFIDENTIAL: <a title='Clear all text' href='?blank=1'>TOP SECRET</a>.</strong></p>
+<h3 id='mardown_examples'>Mardown Examples</h3>
+
+<p><strong>Sub-Directories</strong> If pages are defined in sub-directories, the path to the page will be reflected in the url. Example:</p>
+
+<pre><code>.
+|-- people
+    |-- bob
+        |-- essay.html</code></pre>
+
+<p>This page will be available at <code>http://yourdomain.com/people/bob/essay.html</code></p>
+
+<p><strong>Recommended Pages</strong></p>
+
+<ul>
+<li><strong>index.html</strong> You will always want to define the root index.html page as this will display on your root URL.</li>
+
+<li><strong>404.html</strong></li>
+</ul>
+
+<ol>
+<li>
+<p><strong>Jekyll collects data.</strong> Jekyll scans the posts directory and collects all posts files as post objects. It then scans the layout assets and collects those and finally scans other directories in search of pages.</p>
+</li>
+
+<li>
+<p><strong>Jekyll computes data.</strong></p>
+</li>
+</ol>
+
+<p><strong>CONFIDENTIAL: <a href='?blank=1' title='Clear all text'>TOP SECRET</a>.</strong></p>
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
