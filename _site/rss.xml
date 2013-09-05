@@ -5,44 +5,44 @@
         <description>Ming's Blogs with Jekyll Bootstrap - Ming-der Wang</description>
         <link>http://username.github.io</link>
         <link>http://username.github.io</link>
-        <lastBuildDate>2013-07-29T11:47:09+08:00</lastBuildDate>
-        <pubDate>2013-07-29T11:47:09+08:00</pubDate>
+        <lastBuildDate>2013-08-29T11:57:56+08:00</lastBuildDate>
+        <pubDate>2013-08-29T11:57:56+08:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
-                <title>MediaWalker 2.0 Specification</title>
+                <title>MediaWalker2 Specification</title>
                 <description>&lt;h2 id='overview'&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;This document provides the specification of the API which can be used for developing devices, applications or services to interact with any social media service running on top of a MediaWalker engine 2.0 or above. The core are implemented as a set of RESTful API which you can be access anywhere from Internet via the http protocol, which can be called by almost any computer language, such as Jacascript, Java, php, C#, Ruby, Python, and so on.&lt;/p&gt;
+&lt;p&gt;This document provides the specification of the APIs which can be used for developing devices, applications or services to interact with the social media network which runs on top of a MediaWalker2 engine or above. The core is implemented as a set of RESTful APIs which you can be access anywhere from Internet via the http protocol, which can be called by almost any computer language, such as Jacascript, Java, php, C#, Ruby, Python, and so on.&lt;/p&gt;
 
-&lt;h3 id='what_is_mediawalker'&gt;What is MediaWalker?&lt;/h3&gt;
+&lt;h3 id='what_is_mediawalker2'&gt;What is MediaWalker2?&lt;/h3&gt;
 
-&lt;p&gt;MediaWalker is a Platform as a Service (PaaS) for a peer-to-peer social media network. Not only provide a flexible and high-availability cloud service for media sharing, it also provides a non-blocking peer-to-peer message communication for operators to implement their business logic and connecting all the workflows together. Meanwhile, the respective API will be available for developers to implement applications or services on desktops, websites, mobile devices, or event sensors or any IoT, such as printers or any Arduino devices.&lt;/p&gt;
+&lt;p&gt;MediaWalker2 is a integration Platform as a Service (iPaaS) for quickly implementing a social media network marketplace. Not only provide a flexible and high-availability cloud service for media sharing or trading, it also provides a non-blocking peer-to-peer message communication for operators to implement their business logic and connecting all their business workflows together. Meanwhile, the respective APIs will be available for developers to implement applications or services on desktops, websites, mobile devices, or event sensors or any IoT (Internet of Things), such as mobilephones or any Arduino devices.&lt;/p&gt;
 
-&lt;p&gt;For implementing most of the social media service features, MediaWalker 2.0 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in 2.0 will be listed in the specification section.&lt;/p&gt;
+&lt;p&gt;For implementing most of the social media service features, MediaWalker2 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in MediaWalker2 will be listed in the specification section.&lt;/p&gt;
 
-&lt;h3 id='what_does_mediawalker_20_do'&gt;What does MediaWalker 2.0 Do?&lt;/h3&gt;
+&lt;h3 id='what_does_mediawalker2_do'&gt;What does MediaWalker2 Do?&lt;/h3&gt;
 
-&lt;p&gt;MediaWalker basically acts as a middleware of a media social network service. Therefore, not only it will provide a social network accounts management and also provide API for developers to write variety of applications on top of it or distribute or share DRM or DRM free contents throughout the network and printing services. Therefore, it also provide an authentication method for both applications and licensed contents management.&lt;/p&gt;
+&lt;p&gt;MediaWalker2 basically acts as a middleware of a media social network service. Therefore, not only it will provide a social network accounts management and also provide APIs for developers to write variety of applications on top of it or distribute or share license or license free contents throughout social network and/or e-commerce services. Therefore, it also provide an authentication method for both applications and licensed contents management.&lt;/p&gt;
 
-&lt;p&gt;MediaWalker is design to runs on a cloud service, based on a large message queuing system and multiple web servers in order not to block any API request and provide the best customer users experience. All web engines are spread across to a clustering OSGI containers with a distributed caching. Most of non-critical data are stored in a NoSQL non-blocking database with an automatic backup in order to provide a none-stop and high reliability services.&lt;/p&gt;
+&lt;p&gt;MediaWalker2 is design to runs on a cloud service, based on a large message queuing system and multiple web servers in order not to block any API request and provide the best customer users experience. All web engines are spread across to a clustering OSGI containers with a distributed caching. Most of non-critical data are stored in a NoSQL non-blocking database with an automatic backup in order to provide a none-stop and high reliability services.&lt;/p&gt;
 
-&lt;p&gt;MediaWalker contains a set of default built-in services for operators to provide up-to-date social media network services, such as notifications, chat rooms, a global search engine, and a marketplace for applications or contents free download or purchasing.&lt;/p&gt;
+&lt;p&gt;MediaWalker2 contains a set of default built-in services for operators to provide up-to-date social media network services, such as notifications, chat rooms, a global search engine, and a marketplace for applications or contents free download or purchasing.&lt;/p&gt;
 
 &lt;h3 id='specification'&gt;Specification&lt;/h3&gt;
 
-&lt;p&gt;The following document describes 2.0 of the MediaWalker API.&lt;/p&gt;
+&lt;p&gt;The following document describes MediaWalker2 APIs.&lt;/p&gt;
 
-&lt;p&gt;Basically all API are defined under three categories, resource, data type, service and community category. Resource category includes printers, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, application and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, and twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search, notification, chat rooms and application marketplace services.&lt;/p&gt;
+&lt;p&gt;Basically all APIs are defined under three categories, resource, data type, service and community category. Resource category includes devices, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, application and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, Yahoo and/or twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search, notification, chat rooms and application marketplace services.&lt;/p&gt;
 
 &lt;h2 id='resource_category'&gt;Resource Category&lt;/h2&gt;
 
-&lt;p&gt;Where these resource information, permission or their current status can be access or interact through these API.&lt;/p&gt;
+&lt;p&gt;Where these resource information, permission or their current status can be access or interact through these APIs.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Printer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Device&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;printer
+&lt;pre&gt;&lt;code&gt;device
    /-status
     -info
     -location
@@ -75,7 +75,7 @@
 
 &lt;h2 id='data_type_category'&gt;Data type Category&lt;/h2&gt;
 
-&lt;p&gt;Most of resource are related to each other with some formats for data types, there fore users retrieve these data types information through these API.&lt;/p&gt;
+&lt;p&gt;Most of resource are related to each other with some formats for data types, there fore users retrieve these data types information through these APIs.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;License&lt;/strong&gt;&lt;/p&gt;
 
@@ -118,7 +118,7 @@
    -password
    -email
    -files
-   -printers
+   -devices
    -bank_account
    -social_networks
    -groups&lt;/code&gt;&lt;/pre&gt;
@@ -211,7 +211,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;CONFIDENTIAL: &lt;a title='Clear all text' href='?blank=1'&gt;TOP SECRET&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;CONFIDENTIAL: &lt;a href='?blank=1' title='Clear all text'&gt;TOP SECRET&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</description>
                 <link>http://username.github.io/spec/2013/07/26/mediawalker-20-specification</link>
                 <guid>http://username.github.io/spec/2013/07/26/mediawalker-20-specification</guid>
                 <pubDate>2013-07-26T00:00:00+08:00</pubDate>
@@ -247,9 +247,9 @@
 
 &lt;p&gt;An email &lt;a href='mailto:example@example.com'&gt;&amp;#101;&amp;#120;&amp;#097;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#064;&amp;#101;&amp;#120;&amp;#097;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&lt;/a&gt; link.&lt;/p&gt;
 
-&lt;p&gt;Simple inline link &lt;a href='http://chenluois.com'&gt;http://chenluois.com&lt;/a&gt;, another inline link &lt;a href='http://smallerapp.com'&gt;Smaller&lt;/a&gt;, one more inline link with title &lt;a title='a Safari extension' href='http://resizesafari.com'&gt;Resize&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Simple inline link &lt;a href='http://chenluois.com'&gt;http://chenluois.com&lt;/a&gt;, another inline link &lt;a href='http://smallerapp.com'&gt;Smaller&lt;/a&gt;, one more inline link with title &lt;a href='http://resizesafari.com' title='a Safari extension'&gt;Resize&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;A &lt;a title='Markdown editor on Mac OS X' href='http://mouapp.com'&gt;reference style&lt;/a&gt; link. Input id, then anywhere in the doc, define the link with corresponding id:&lt;/p&gt;
+&lt;p&gt;A &lt;a href='http://mouapp.com' title='Markdown editor on Mac OS X'&gt;reference style&lt;/a&gt; link. Input id, then anywhere in the doc, define the link with corresponding id:&lt;/p&gt;
 
 &lt;p&gt;Titles ( or called tool tips ) in the links are optional.&lt;/p&gt;
 
@@ -336,7 +336,7 @@ var Mou = exactlyTheAppIwant; &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:&lt;/p&gt;
 
-&lt;p&gt;That&amp;#8217;s some text with a footnote.&lt;sup id='fnref:1'&gt;&lt;a href='#fn:1' rel='footnote'&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s some text with a footnote.&lt;sup id='fnref:1'&gt;&lt;a rel='footnote' href='#fn:1'&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h4 id='strikethrough'&gt;Strikethrough&lt;/h4&gt;
 
@@ -501,7 +501,7 @@ a start and end fence lines to delimit the code block.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For feedback, use the menu &lt;code&gt;Help&lt;/code&gt; - &lt;code&gt;Send Feedback&lt;/code&gt;&lt;/p&gt;
 &lt;div class='footnotes'&gt;&lt;hr /&gt;&lt;ol&gt;&lt;li id='fn:1'&gt;
 &lt;p&gt;And that&amp;#8217;s the footnote.&lt;/p&gt;
-&lt;a href='#fnref:1' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</description>
+&lt;a rev='footnote' href='#fnref:1'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</description>
                 <link>http://username.github.io/2013/06/23/mou-markdown-editor</link>
                 <guid>http://username.github.io/2013/06/23/mou-markdown-editor</guid>
                 <pubDate>2013-06-23T00:00:00+08:00</pubDate>
@@ -7543,7 +7543,7 @@ a start and end fence lines to delimit the code block.&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id='why_who'&gt;Why, who?&lt;/h3&gt;
 
-&lt;p&gt;I, &lt;a title='InstantMark creator, Jr. Hames' href='http://jrham.es'&gt;Jr. Hames&lt;/a&gt;, love Markdown and it&amp;#8217;s simplicity, but I can&amp;#8217;t find an editor that&amp;#8217;s just good and simple as such. That&amp;#8217;s why I create this web app. Actually, I liked it so much, that I wrote this entire text right here, after finishing the code.&lt;/p&gt;
+&lt;p&gt;I, &lt;a href='http://jrham.es' title='InstantMark creator, Jr. Hames'&gt;Jr. Hames&lt;/a&gt;, love Markdown and it&amp;#8217;s simplicity, but I can&amp;#8217;t find an editor that&amp;#8217;s just good and simple as such. That&amp;#8217;s why I create this web app. Actually, I liked it so much, that I wrote this entire text right here, after finishing the code.&lt;/p&gt;
 
 &lt;p&gt;I hope you like it. Please, feel free to contact me if you have any questions/suggestions or found a issue.&lt;/p&gt;
 
@@ -7551,19 +7551,19 @@ a start and end fence lines to delimit the code block.&lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a title='Showdown at GitHub' href='https://github.com/coreyti/showdown'&gt;Showdown&lt;/a&gt;&lt;/strong&gt;, a Javascript port of Markdown.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href='https://github.com/coreyti/showdown' title='Showdown at GitHub'&gt;Showdown&lt;/a&gt;&lt;/strong&gt;, a Javascript port of Markdown.&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a title='FileSaver.js at GitHub' href='https://github.com/eligrey/FileSaver.js'&gt;FileSaver.js&lt;/a&gt;&lt;/strong&gt;, implements the &lt;code&gt;W3C saveAs()&lt;/code&gt; FileSaver interface in browsers that do not natively support it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href='https://github.com/eligrey/FileSaver.js' title='FileSaver.js at GitHub'&gt;FileSaver.js&lt;/a&gt;&lt;/strong&gt;, implements the &lt;code&gt;W3C saveAs()&lt;/code&gt; FileSaver interface in browsers that do not natively support it.&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a title='BlobBuilder at GitHub' href='https://github.com/eligrey/BlobBuilder.js'&gt;BlobBuilder.js&lt;/a&gt;&lt;/strong&gt;, implements the &lt;code&gt;W3C BlobBuilder&lt;/code&gt; interface in browsers that do not natively support it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href='https://github.com/eligrey/BlobBuilder.js' title='BlobBuilder at GitHub'&gt;BlobBuilder.js&lt;/a&gt;&lt;/strong&gt;, implements the &lt;code&gt;W3C BlobBuilder&lt;/code&gt; interface in browsers that do not natively support it.&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;A modified version of &lt;strong&gt;&lt;a title='Markdown CSS at BitBucket' href='http://kevinburke.bitbucket.org/markdowncss'&gt;Markdown.css&lt;/a&gt;&lt;/strong&gt;, a better default styling for your Markdown files. You can download our custom version &lt;a title='Preview CSS file - InstantMark' href='http://jrham.es/instantmark/preview.css'&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A modified version of &lt;strong&gt;&lt;a href='http://kevinburke.bitbucket.org/markdowncss' title='Markdown CSS at BitBucket'&gt;Markdown.css&lt;/a&gt;&lt;/strong&gt;, a better default styling for your Markdown files. You can download our custom version &lt;a href='http://jrham.es/instantmark/preview.css' title='Preview CSS file - InstantMark'&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>
                 <link>http://username.github.io/2013/06/16/hello-world</link>

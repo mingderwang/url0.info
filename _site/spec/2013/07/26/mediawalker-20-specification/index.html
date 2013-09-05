@@ -7,10 +7,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>MediaWalker 2.0 Specification</title>
+	<title>MediaWalker2 Specification</title>
 	<meta name="author" content="Ming-der Wang">
 	<link href='/assets/themes/the-program/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="MediaWalker 2.0 Specification" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="MediaWalker2 Specification" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 </head>
 <body>
@@ -44,7 +44,7 @@
 			<header>
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">MediaWalker 2.0 Specification</h1>
+						<h1 class="h2 entry-title">MediaWalker2 Specification</h1>
 					</div><!-- unit-inner -->
 				</div><!-- unit-head -->
 			</header>
@@ -53,35 +53,35 @@
 				<div class="entry-content">
 					<h2 id='overview'>Overview</h2>
 
-<p>This document provides the specification of the API which can be used for developing devices, applications or services to interact with any social media service running on top of a MediaWalker engine 2.0 or above. The core are implemented as a set of RESTful API which you can be access anywhere from Internet via the http protocol, which can be called by almost any computer language, such as Jacascript, Java, php, C#, Ruby, Python, and so on.</p>
+<p>This document provides the specification of the APIs which can be used for developing devices, applications or services to interact with the social media network which runs on top of a MediaWalker2 engine or above. The core is implemented as a set of RESTful APIs which you can be access anywhere from Internet via the http protocol, which can be called by almost any computer language, such as Jacascript, Java, php, C#, Ruby, Python, and so on.</p>
 
-<h3 id='what_is_mediawalker'>What is MediaWalker?</h3>
+<h3 id='what_is_mediawalker2'>What is MediaWalker2?</h3>
 
-<p>MediaWalker is a Platform as a Service (PaaS) for a peer-to-peer social media network. Not only provide a flexible and high-availability cloud service for media sharing, it also provides a non-blocking peer-to-peer message communication for operators to implement their business logic and connecting all the workflows together. Meanwhile, the respective API will be available for developers to implement applications or services on desktops, websites, mobile devices, or event sensors or any IoT, such as printers or any Arduino devices.</p>
+<p>MediaWalker2 is a integration Platform as a Service (iPaaS) for quickly implementing a social media network marketplace. Not only provide a flexible and high-availability cloud service for media sharing or trading, it also provides a non-blocking peer-to-peer message communication for operators to implement their business logic and connecting all their business workflows together. Meanwhile, the respective APIs will be available for developers to implement applications or services on desktops, websites, mobile devices, or event sensors or any IoT (Internet of Things), such as mobilephones or any Arduino devices.</p>
 
-<p>For implementing most of the social media service features, MediaWalker 2.0 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in 2.0 will be listed in the specification section.</p>
+<p>For implementing most of the social media service features, MediaWalker2 includes some must-have modules to provide the basic functions, such as user account management with web identity federation, media (file) storage, meta data searching, and sharing, notification and messaging queuing, and so on. Beside the built-in modules, MediaWalker engine also provides some interfaces to communicate with existing Internet blobstore services, such as Amazon S3, SNS, SQS, etc. For more details about available modules in MediaWalker2 will be listed in the specification section.</p>
 
-<h3 id='what_does_mediawalker_20_do'>What does MediaWalker 2.0 Do?</h3>
+<h3 id='what_does_mediawalker2_do'>What does MediaWalker2 Do?</h3>
 
-<p>MediaWalker basically acts as a middleware of a media social network service. Therefore, not only it will provide a social network accounts management and also provide API for developers to write variety of applications on top of it or distribute or share DRM or DRM free contents throughout the network and printing services. Therefore, it also provide an authentication method for both applications and licensed contents management.</p>
+<p>MediaWalker2 basically acts as a middleware of a media social network service. Therefore, not only it will provide a social network accounts management and also provide APIs for developers to write variety of applications on top of it or distribute or share license or license free contents throughout social network and/or e-commerce services. Therefore, it also provide an authentication method for both applications and licensed contents management.</p>
 
-<p>MediaWalker is design to runs on a cloud service, based on a large message queuing system and multiple web servers in order not to block any API request and provide the best customer users experience. All web engines are spread across to a clustering OSGI containers with a distributed caching. Most of non-critical data are stored in a NoSQL non-blocking database with an automatic backup in order to provide a none-stop and high reliability services.</p>
+<p>MediaWalker2 is design to runs on a cloud service, based on a large message queuing system and multiple web servers in order not to block any API request and provide the best customer users experience. All web engines are spread across to a clustering OSGI containers with a distributed caching. Most of non-critical data are stored in a NoSQL non-blocking database with an automatic backup in order to provide a none-stop and high reliability services.</p>
 
-<p>MediaWalker contains a set of default built-in services for operators to provide up-to-date social media network services, such as notifications, chat rooms, a global search engine, and a marketplace for applications or contents free download or purchasing.</p>
+<p>MediaWalker2 contains a set of default built-in services for operators to provide up-to-date social media network services, such as notifications, chat rooms, a global search engine, and a marketplace for applications or contents free download or purchasing.</p>
 
 <h3 id='specification'>Specification</h3>
 
-<p>The following document describes 2.0 of the MediaWalker API.</p>
+<p>The following document describes MediaWalker2 APIs.</p>
 
-<p>Basically all API are defined under three categories, resource, data type, service and community category. Resource category includes printers, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, application and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, and twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search, notification, chat rooms and application marketplace services.</p>
+<p>Basically all APIs are defined under three categories, resource, data type, service and community category. Resource category includes devices, files, advertisement. Data type category are used to define some sharing data types, such as license, authentication, account, application and so on. Community category is designed for managing users accounts and provide a easy way to interact with popular social networks, like Facebook, Google+, Yahoo and/or twitter accounts. These users account can be assigned treat as a content publisher, an application or service developer, or a regular user. The last category is a list of built-in services, such as global search, notification, chat rooms and application marketplace services.</p>
 
 <h2 id='resource_category'>Resource Category</h2>
 
-<p>Where these resource information, permission or their current status can be access or interact through these API.</p>
+<p>Where these resource information, permission or their current status can be access or interact through these APIs.</p>
 
-<p><strong>Printer</strong></p>
+<p><strong>Device</strong></p>
 
-<pre><code>printer
+<pre><code>device
    /-status
     -info
     -location
@@ -114,7 +114,7 @@
 
 <h2 id='data_type_category'>Data type Category</h2>
 
-<p>Most of resource are related to each other with some formats for data types, there fore users retrieve these data types information through these API.</p>
+<p>Most of resource are related to each other with some formats for data types, there fore users retrieve these data types information through these APIs.</p>
 
 <p><strong>License</strong></p>
 
@@ -157,7 +157,7 @@
    -password
    -email
    -files
-   -printers
+   -devices
    -bank_account
    -social_networks
    -groups</code></pre>
@@ -250,7 +250,7 @@
 </li>
 </ol>
 
-<p><strong>CONFIDENTIAL: <a title='Clear all text' href='?blank=1'>TOP SECRET</a>.</strong></p>
+<p><strong>CONFIDENTIAL: <a href='?blank=1' title='Clear all text'>TOP SECRET</a>.</strong></p>
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
